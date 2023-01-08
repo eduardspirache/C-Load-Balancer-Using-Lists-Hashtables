@@ -1,0 +1,52 @@
+#Load Balancer for Distributed Key-Value Store
+I implemented a load balancer in the 2nd semester of university with personal variants of data structures, such as: linked lists, circular lists and hash tables. It distributes key-value pairs across multiple servers and retrieves values from the appropriate server.
+
+#Functionality
+The load balancer provides the following functionality:
+
+- Store key-value pairs
+- Retrieve values for a given key
+- Add new servers to the load balancer
+- Remove existing servers from the load balancer
+
+#How to Use
+To use the load balancer, call the apply_requests function and pass it an input file. The input file should contain requests, one per line, in the following format:
+
+- "store" followed by a key-value pair in quotes
+- "retrieve" followed by a key in quotes
+- "add_server" followed by a server id (integer)
+- "remove_server" followed by a server id (integer)
+
+#Example
+For example, the input file:
+```
+store "key1" "value1"
+store "key2" "value2"
+retrieve "key1"
+add_server 1
+store "key3" "value3"
+remove_server 1
+retrieve "key3"
+```
+will produce the following output:
+
+```
+Stored value1 on server 0.
+Stored value2 on server 1.
+Retrieved value1 from server 0.
+Stored value3 on server 2.
+Key key3 not present.
+```
+
+#Compiling and Running
+
+To compile the program, run the following command:
+```
+make
+```
+
+To run the program, use the following command:
+```
+./load-balancer input-file
+```
+

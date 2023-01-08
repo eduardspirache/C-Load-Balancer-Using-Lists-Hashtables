@@ -1,0 +1,7 @@
+add_server 100
+store "c1a7bb1a04c229228f92be1528360486" "ABC"
+store "a1a7bb1a04c229228f92be1528360186" "LASDDADS"
+store "b1a7bb1a04c229228f92be1528360986" "Oxollox"
+add_server 105
+add_server 0
+retrieve "b1a7bb1a04c229228f92be1528360986"
